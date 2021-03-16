@@ -242,3 +242,8 @@ tar -xvf lake_depth.tar.bz2 -C $HOME/WRF/GEOG/WPS_GEOG
 ## export PATH and LD_LIBRARY_PATH
 echo "export PATH=$DIR/bin:$PATH" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+
+
+#####################################BASH Script Finished##############################
+echo "Congratulations! You've successfully installed all required files to run the Weather Research Forecast Model verison 4.2.2."
+echo "Thank you for using this script -Will-" 
