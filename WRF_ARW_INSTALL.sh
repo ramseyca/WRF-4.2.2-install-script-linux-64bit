@@ -167,7 +167,7 @@ mv $HOME/WRF/opengrads-2.2.1.oga.1  $HOME/WRF/GrADS
 cd GrADS/Contents
 wget -c ftp://ftp.cpc.ncep.noaa.gov/wd51we/g2ctl/g2ctl
 chmod +x g2ctl
-export PATH=$HOME/GrADS/Contents:$PATH
+export PATH=$HOME/WRF/GrADS/Contents:$PATH
 
 ############################ WRF 4.2.2 #################################
 ## WRF v4.2.2
