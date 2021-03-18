@@ -167,6 +167,15 @@ mv $HOME/WRF/opengrads-2.2.1.oga.1  $HOME/WRF/GrADS
 cd GrADS/Contents
 wget -c ftp://ftp.cpc.ncep.noaa.gov/wd51we/g2ctl/g2ctl
 chmod +x g2ctl
+wget -c https://sourceforge.net/projects/opengrads/files/wgrib2/0.1.9.4/wgrib2-v0.1.9.4-bin-x86_64-glibc2.5-linux-gnu.tar.gz
+tar -xzvf wgrib2-v0.1.9.4-bin-x86_64-glibc2.5-linux-gnu.tar.gz
+cd wgrib2-v0.1.9.4/bin
+mv wgrib2 $HOME/WRF/GrADS/Contents
+cd $HOME/WRF/GrADS/Contents
+rm wgrib2-v0.1.9.4-bin-x86_64-glibc2.5-linux-gnu.tar.gz
+rm -r wgrib2-v0.1.9.4
+
+
 export PATH=$HOME/WRF/GrADS/Contents:$PATH
 
 ############################ WRF 4.2.2 #################################
