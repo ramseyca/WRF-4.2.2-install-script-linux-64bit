@@ -255,4 +255,4 @@ echo "export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 
 #####################################BASH Script Finished##############################
 echo "Congratulations! You've successfully installed all required files to run the Weather Research Forecast Model verison 4.2.2."
-echo "Thank you for using this script -Will-" 
+echo "Thank you for using this script" 
