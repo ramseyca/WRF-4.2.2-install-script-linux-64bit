@@ -157,6 +157,24 @@ export NETCDF=$DIR/NETCDF
 ./configure  #Option 8 gfortran compiler with distributed memory
 ./compile
 
+
+
+######################## ARWpost V3.1  ############################
+## ARWpost
+##Configure #3
+###################################################################
+cd $HOME/WRF/Downloads
+wget -c http://www2.mmm.ucar.edu/wrf/src/ARWpost_V3.tar.gz
+tar -xvzf ARWpost_V3.tar.gz -C $HOME/WRF
+cd $HOME/WRF/ARWpost
+./clean
+sed -i -e 's/-lnetcdf/-lnetcdff -lnetcdf/g' $HOME/WRF/ARWpost/src/Makefile
+export NETCDF=$DIR/NETCDF
+./configure  
+sed -i -e 's/-C -P/-P/g' $HOME/WRF/ARWpost/configure.arwp
+./compile
+
+
 ################################OpenGrADS######################################
 #Verison 2.2.1 64bit of Linux
 #############################################################################
