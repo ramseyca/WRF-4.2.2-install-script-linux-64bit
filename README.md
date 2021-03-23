@@ -10,4 +10,5 @@ chmod +x WRF_ARW_INSTALL.sh
 
 ./WRF_ARW_INSTALL
 
-
+#Please make sure to read the WRF_ARW_INSTALL.sh script before installing.  
+I have provided comments on what the script is doing and information on configuration files.
