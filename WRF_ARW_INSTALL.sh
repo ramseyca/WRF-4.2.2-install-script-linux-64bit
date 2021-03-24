@@ -10,7 +10,7 @@
 #############################basic package managment############################
 sudo apt update                                                                                                   
 sudo apt upgrade                                                                                                    
-sudo apt install gcc gfortran g++ libtool automake autoconf make m4 default-jre default-jdk csh ksh git ncview      
+sudo apt install gcc gfortran g++ libtool automake autoconf make m4 default-jre default-jdk csh ksh git ncview ncl-ncarg     
 
 ##############################Directory Listing############################
 export HOME=`cd;pwd`
