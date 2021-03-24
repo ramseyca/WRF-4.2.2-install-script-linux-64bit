@@ -6,6 +6,7 @@
 # Tested with current available libraries on 03/15/2021
 # If newer libraries exist edit script paths for changes
 #Estimated Run Time ~ 80 - 120 Minutes
+#Special thanks to  Youtube's meteoadriatic and GitHub user jamal919
 
 #############################basic package managment############################
 sudo apt update                                                                                                   
