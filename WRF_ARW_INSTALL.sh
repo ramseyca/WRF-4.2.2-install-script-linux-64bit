@@ -160,7 +160,8 @@ export NETCDF=$DIR/NETCDF
 
 ./configure  #Option 8 gfortran compiler with distributed memory
 ./compile
-
+cd $HOME/WRF/UPPV4.1/scripts
+chmod +x run_unipost
 
 
 ######################## ARWpost V3.1  ############################
