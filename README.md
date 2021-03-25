@@ -1,5 +1,5 @@
 # WRF-4.2.2-install-script
-This is a script that installs all the libararies, software, programs, and geostatic data to run the Weather Research Forecast Model (WRF-4.2.2). 
+This is a script that installs all the libararies, software, programs, and geostatic data to run the Weather Research Forecast Model (WRF-4.2.2) with the option to run 3DVAR & 4DVAR observational data. 
 
 # Installation 
 (Make sure to download folder into your Home Directory):
