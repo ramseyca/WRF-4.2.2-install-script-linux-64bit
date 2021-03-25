@@ -18,6 +18,8 @@ export HOME=`cd;pwd`
 mkdir $HOME/WRF
 cd $HOME/WRF
 mkdir Downloads
+mkdir WRFPLUS
+mkdir WRFDA
 mkdir Libs
 mkdir Libs/grib2
 mkdir Libs/NETCDF
@@ -33,6 +35,7 @@ wget -c http://www.mpich.org/static/downloads/3.4.1/mpich-3.4.1.tar.gz
 wget -c https://download.sourceforge.net/libpng/libpng-1.6.37.tar.gz
 wget -c https://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
 wget -c https://sourceforge.net/projects/opengrads/files/grads2/2.2.1.oga.1/Linux%20%2864%20Bits%29/opengrads-2.2.1.oga.1-bundle-x86_64-pc-linux-gnu-glibc_2.17.tar.gz
+
 
 
 
@@ -223,6 +226,55 @@ tar -xvzf v4.2.tar.gz -C $HOME/WRF
 cd $HOME/WRF/WPS-4.2
 ./configure #Option 3 for gfortran and distributed memory 
 ./compile
+
+
+
+
+############################WRFPLUS 4DVAR###############################
+## WRFPLUS v4.2 4DVAR
+## Downloaded from git tagged releases
+## WRFPLUS is built within the WRF git folder
+## Does not include RTTOV Libarary for radiation data.  If wanted will need to install library then reconfigure
+##Note: if you intend to run both 3DVAR and 4DVAR experiments, it is not necessary to compile the code twice. 
+########################################################################
+cd $HOME/WRF/Downloads
+tar -xvzf v4.2.2.tar.gz -C $HOME/WRF/WRFPLUS
+cd $HOME/WRF/WRFPLUS/WRF-4.2.2
+mv * $HOME/WRF/WRFPLUS
+cd $HOME/WRF/WRFPLUS
+rm -r WRF-4.2.2/
+export NETCDF=$DIR/NETCDF
+export HDF5=$DIR/grib2
+export LD_LIBRARY_PATH=$DIR/grib2/lib:$LD_LIBRARY_PATH
+./configure wrfplus  #Option 18 for gfortran/gcc and distribunted memory 
+./compile wrfplus   
+export WRFPLUS_DIR=$HOME/WRF/WRFPLUS
+
+
+
+
+############################WRFDA 4DVAR###############################
+## WRFDA v4.2 4DVAR
+## Downloaded from git tagged releases
+## WRFDA is built within the WRFPLUS folder
+## Does not include RTTOV Libarary for radiation data.  If wanted will need to install library then reconfigure
+##Note: if you intend to run both 3DVAR and 4DVAR experiments, it is not necessary to compile the code twice. 
+########################################################################
+cd $HOME/WRF/Downloads
+tar -xvzf v4.2.2.tar.gz -C $HOME/WRF/WRFDA
+cd $HOME/WRF/WRFDA/WRF-4.2.2
+mv * $HOME/WRF/WRFDA
+cd $HOME/WRF/WRFDA
+rm -r WRF-4.2.2/
+export NETCDF=$DIR/NETCDF
+export HDF5=$DIR/grib2
+export LD_LIBRARY_PATH=$DIR/grib2/lib:$LD_LIBRARY_PATH
+export WRFPLUS_DIR=$HOME/WRF/WRFPLUS
+./configure 4dvar #Option 18 for gfortran/gcc and distribunted memory 
+./compile all_wrfvar
+
+
+
 
 ######################## WPS Domain Setup Tools ########################
 ## DomainWizard
