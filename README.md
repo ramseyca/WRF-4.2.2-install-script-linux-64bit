@@ -20,7 +20,7 @@ Download and install required library and data files for WRF.
 
 Tested in Ubuntu 20.04 LTS
 
-Built in 64-bit system
+Built in 64-bit system 32-bit option possible with minor changes to code.
 
 Tested with current available libraries on 03/15/2021
 
