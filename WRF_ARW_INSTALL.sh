@@ -150,6 +150,7 @@ export NETCDF=$DIR/NETCDF
 #Previous verison of UPP
 #Current verison of UPP requires extra libraries not included in this script
 #IF you choose to use UPP9.0 or later you will need to edit this script and download additional programs
+#Option 8 gfortran compiler with distributed memory
 #############################################################################
 cd $HOME/WRF
 git clone -b dtc_post_v4.1.0 --recurse-submodules https://github.com/NOAA-EMC/EMC_post UPPV4.1 
@@ -204,6 +205,7 @@ export PATH=$HOME/WRF/GrADS/Contents:$PATH
 ############################ WRF 4.2.2 #################################
 ## WRF v4.2.2
 ## Downloaded from git tagged releases
+# option 34, option 1 for gfortran and distributed memory w/basic nesting
 ########################################################################
 cd $HOME/WRF/Downloads
 wget -c https://github.com/wrf-model/WRF/archive/v4.2.2.tar.gz
@@ -220,6 +222,7 @@ export WRF_DIR=$HOME/WRF/WRF-4.2.2
 ############################WPSV4.2#####################################
 ## WPS v4.2
 ## Downloaded from git tagged releases
+#Option 3 for gfortran and distributed memory 
 ########################################################################
 cd $HOME/WRF/Downloads
 wget -c https://github.com/wrf-model/WPS/archive/v4.2.tar.gz
@@ -237,6 +240,7 @@ cd $HOME/WRF/WPS-4.2
 ## WRFPLUS is built within the WRF git folder
 ## Does not include RTTOV Libarary for radiation data.  If wanted will need to install library then reconfigure
 ##Note: if you intend to run both 3DVAR and 4DVAR experiments, it is not necessary to compile the code twice. 
+#Option 18 for gfortran/gcc and distribunted memory 
 ########################################################################
 cd $HOME/WRF/Downloads
 tar -xvzf v4.2.2.tar.gz -C $HOME/WRF/WRFPLUS
@@ -260,6 +264,7 @@ export WRFPLUS_DIR=$HOME/WRF/WRFPLUS
 ## WRFDA is built within the WRFPLUS folder
 ## Does not include RTTOV Libarary for radiation data.  If wanted will need to install library then reconfigure
 ##Note: if you intend to run both 3DVAR and 4DVAR experiments, it is not necessary to compile the code twice. 
+#Option 18 for gfortran/gcc and distribunted memory 
 ########################################################################
 cd $HOME/WRF/Downloads
 tar -xvzf v4.2.2.tar.gz -C $HOME/WRF/WRFDA
