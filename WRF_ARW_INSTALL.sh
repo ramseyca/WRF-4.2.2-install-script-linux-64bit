@@ -3,6 +3,7 @@
 ## WRF installation with parallel process.
 # Download and install required library and data files for WRF.
 # Tested in Ubuntu 20.04 LTS
+# Built in 64-bit system
 # Tested with current available libraries on 03/15/2021
 # If newer libraries exist edit script paths for changes
 #Estimated Run Time ~ 80 - 120 Minutes
