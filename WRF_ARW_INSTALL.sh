@@ -12,7 +12,7 @@
 #############################basic package managment############################
 sudo apt update                                                                                                   
 sudo apt upgrade                                                                                                    
-sudo apt install gcc gfortran g++ libtool automake autoconf make m4 default-jre default-jdk csh ksh git ncview ncl-ncarg m4 build-essential nasm cmake unzip libxmu-dev libcairo-dev libbz2-dev libxaw7-dev libx11-dev xorg-dev flex bison    
+sudo apt install gcc gfortran g++ libtool automake autoconf make m4 default-jre default-jdk csh ksh git ncview ncl-ncarg m4 build-essential nasm cmake unzip libxmu-dev libcairo-dev libbz2-dev libxaw7-dev libx11-dev xorg-dev flex bison byacc    
 
 ##############################Directory Listing############################
 export HOME=`cd;pwd`
