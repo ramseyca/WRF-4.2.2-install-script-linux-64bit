@@ -209,7 +209,9 @@ export PATH=$HOME/WRF/GrADS/Contents:$PATH
 ## WRF v4.2.2
 ## Downloaded from git tagged releases
 # option 34, option 1 for gfortran and distributed memory w/basic nesting
+# large file support enable with WRFiO_NCD_LARGE_FILE_SUPPORT=1
 ########################################################################
+export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 cd $HOME/WRF/Downloads
 wget -c https://github.com/wrf-model/WRF/archive/v4.2.2.tar.gz
 tar -xvzf v4.2.2.tar.gz -C $HOME/WRF
